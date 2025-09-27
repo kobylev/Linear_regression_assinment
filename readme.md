@@ -201,10 +201,9 @@ Sample Size       R²   Adj R²  Difference      RMSE
 
 ## 📈 Visualizations Generated and Results Analysis
 
-### 1. Comprehensive Analysis Plot (`regression_analysis_comprehensive.png`)
+### 1. Comprehensive Analysis Plot w(`regression_analysis_comprehensive.png`)
 
 ![Comprehensive Analysis Plot](regression_analysis_comprehensive.png)
-
 
 This six-panel diagnostic plot includes:
 
@@ -248,7 +247,7 @@ This six-panel diagnostic plot includes:
 
 ### 2. Sample Size Analysis Plot (`sample_size_analysis.png`)
 
-![Comprehensive Analysis Plot](sample_size_analysis.png)
+![Sample Size Analysis Example](sample_size_analysis.png)
 
 *Example representation of the sample size effect analysis*
 
@@ -573,4 +572,4 @@ The framework can be easily extended for:
 
 ---
 
-*This project successfully demonstrates the fundamental concepts of linear regression analysis with practical implementation, comprehensive evaluation metrics, and professional-quality code organization suitable for both educational purposes and real-world applications.*# Linear_regression_assinment
+*This project successfully demonstrates the fundamental concepts of linear regression analysis with practical implementation, comprehensive evaluation metrics, and professional-quality code organization suitable for both educational purposes and real-world applications.*
