@@ -1,0 +1,314 @@
+2025-11-30 14:54:23,072 - __main__ - INFO - Starting linear regression analysis.
+2025-11-30 14:54:23,072 - __main__ - INFO - Generating synthetic data...
+2025-11-30 14:54:23,073 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,073 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,073 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,077 - __main__ - INFO - Data generation complete.
+2025-11-30 14:54:23,077 - __main__ - INFO - Training and evaluating model...
+2025-11-30 14:54:23,077 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,077 - model_trainer - INFO - Fitting model with 1000 samples and 4 features.
+2025-11-30 14:54:23,085 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,085 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,085 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,086 - evaluator - INFO - Calculated metrics: {'r2': 0.998329120662214, 'adjusted_r2': 0.9983224035593485, 'r2_difference': 6.7171028654833265e-06, 'mse': np.float64(3.923551023004495), 'rmse': np.float64(1.9807955530555128), 'mae': np.float64(1.5721697953446734), 'n_samples': 1000, 'n_features': 4}
+2025-11-30 14:54:23,087 - evaluator - INFO - Comparing fitted parameters with true parameters.
+2025-11-30 14:54:23,087 - evaluator - INFO - Parameter comparison: {'true_intercept': 5.0, 'fitted_intercept': np.float64(5.006271870129964), 'intercept_error': np.float64(0.006271870129964441), 'true_coefficients': [2.5, -1.8, 3.2, 0.7], 'fitted_coefficients': [2.493399264542188, -1.8046435430316934, 3.206081405809486, 0.7054648629401776], 'coefficient_errors': [0.006600735457812146, 0.004643543031693342, 0.006081405809486018, 0.005464862940177673], 'mean_coefficient_error': np.float64(0.005697636809792295)}
+2025-11-30 14:54:23,087 - __main__ - INFO - Model training and evaluation complete.
+2025-11-30 14:54:23,087 - __main__ - INFO - Running sample size analysis...
+2025-11-30 14:54:23,087 - sample_size_analyzer - INFO - Initialized SampleSizeAnalyzer.
+2025-11-30 14:54:23,087 - sample_size_analyzer - INFO - Analyzing sample sizes: [50, 100, 500, 1000, 2000, 5000]
+2025-11-30 14:54:23,087 - data_generator - INFO - Initialized SyntheticDataGenerator with n=50, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,087 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:54:23,087 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,088 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,088 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,088 - model_trainer - INFO - Fitting model with 50 samples and 4 features.
+2025-11-30 14:54:23,089 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,089 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,089 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,090 - evaluator - INFO - Calculated metrics: {'r2': 0.9983245065620255, 'adjusted_r2': 0.9981755738119834, 'r2_difference': 0.00014893275004213002, 'mse': np.float64(3.7745072692696358), 'rmse': np.float64(1.942809118073527), 'mae': np.float64(1.5404271420156601), 'n_samples': 50, 'n_features': 4}
+2025-11-30 14:54:23,090 - data_generator - INFO - Initialized SyntheticDataGenerator with n=100, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,090 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:54:23,090 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,091 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,091 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,091 - model_trainer - INFO - Fitting model with 100 samples and 4 features.
+2025-11-30 14:54:23,092 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,092 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,092 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,093 - evaluator - INFO - Calculated metrics: {'r2': 0.9985790552046784, 'adjusted_r2': 0.9985192259501385, 'r2_difference': 5.982925453984489e-05, 'mse': np.float64(4.047256183277841), 'rmse': np.float64(2.0117793575036607), 'mae': np.float64(1.602169743938645), 'n_samples': 100, 'n_features': 4}
+2025-11-30 14:54:23,093 - data_generator - INFO - Initialized SyntheticDataGenerator with n=500, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,093 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:54:23,093 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,093 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,093 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,093 - model_trainer - INFO - Fitting model with 500 samples and 4 features.
+2025-11-30 14:54:23,094 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,094 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,095 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,096 - evaluator - INFO - Calculated metrics: {'r2': 0.9983309363500762, 'adjusted_r2': 0.9983174489670466, 'r2_difference': 1.3487383029642253e-05, 'mse': np.float64(3.6370030159060818), 'rmse': np.float64(1.9070928178528914), 'mae': np.float64(1.5292224553268696), 'n_samples': 500, 'n_features': 4}
+2025-11-30 14:54:23,096 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,096 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:54:23,096 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,096 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,096 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,097 - model_trainer - INFO - Fitting model with 1000 samples and 4 features.
+2025-11-30 14:54:23,097 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,097 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,098 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,098 - evaluator - INFO - Calculated metrics: {'r2': 0.998329120662214, 'adjusted_r2': 0.9983224035593485, 'r2_difference': 6.7171028654833265e-06, 'mse': np.float64(3.923551023004495), 'rmse': np.float64(1.9807955530555128), 'mae': np.float64(1.5721697953446734), 'n_samples': 1000, 'n_features': 4}
+2025-11-30 14:54:23,099 - data_generator - INFO - Initialized SyntheticDataGenerator with n=2000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,099 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:54:23,099 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,100 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,100 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,100 - model_trainer - INFO - Fitting model with 2000 samples and 4 features.
+2025-11-30 14:54:23,103 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,103 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,103 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,105 - evaluator - INFO - Calculated metrics: {'r2': 0.9982997537092936, 'adjusted_r2': 0.9982963446941744, 'r2_difference': 3.409015119193448e-06, 'mse': np.float64(3.9007326596510477), 'rmse': np.float64(1.975027255419795), 'mae': np.float64(1.5757356880672828), 'n_samples': 2000, 'n_features': 4}
+2025-11-30 14:54:23,105 - data_generator - INFO - Initialized SyntheticDataGenerator with n=5000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,105 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:54:23,105 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,106 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,106 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,106 - model_trainer - INFO - Fitting model with 5000 samples and 4 features.
+2025-11-30 14:54:23,108 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,109 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,109 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,110 - evaluator - INFO - Calculated metrics: {'r2': 0.9983494878279202, 'adjusted_r2': 0.998348166096451, 'r2_difference': 1.3217314691615911e-06, 'mse': np.float64(3.8588511473085148), 'rmse': np.float64(1.9643958733688367), 'mae': np.float64(1.5748090956136256), 'n_samples': 5000, 'n_features': 4}
+2025-11-30 14:54:23,110 - sample_size_analyzer - INFO - Sample size analysis completed.
+2025-11-30 14:54:23,111 - __main__ - INFO - Sample size analysis complete.
+2025-11-30 14:54:23,111 - __main__ - INFO - Running predictor impact analysis...
+2025-11-30 14:54:23,111 - predictor_analyzer - INFO - Initialized PredictorImpactAnalyzer.
+2025-11-30 14:54:23,111 - predictor_analyzer - INFO - Analyzing predictor impact with counts: [2, 4, 6, 8, 10] and n=1000
+2025-11-30 14:54:23,111 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=2, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,111 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8]
+2025-11-30 14:54:23,112 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,112 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,112 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,113 - model_trainer - INFO - Fitting model with 1000 samples and 2 features.
+2025-11-30 14:54:23,114 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,114 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,114 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,115 - evaluator - INFO - Calculated metrics: {'r2': 0.9954006135741387, 'adjusted_r2': 0.9953913871219303, 'r2_difference': 9.226452208355163e-06, 'mse': np.float64(3.8625568701527833), 'rmse': np.float64(1.96533886903831), 'mae': np.float64(1.5698808713175207), 'n_samples': 1000, 'n_features': 2}
+2025-11-30 14:54:23,116 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,116 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:54:23,116 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,116 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,117 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,117 - model_trainer - INFO - Fitting model with 1000 samples and 4 features.
+2025-11-30 14:54:23,118 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,119 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,119 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,120 - evaluator - INFO - Calculated metrics: {'r2': 0.998329120662214, 'adjusted_r2': 0.9983224035593485, 'r2_difference': 6.7171028654833265e-06, 'mse': np.float64(3.923551023004495), 'rmse': np.float64(1.9807955530555128), 'mae': np.float64(1.5721697953446734), 'n_samples': 1000, 'n_features': 4}
+2025-11-30 14:54:23,120 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=6, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,120 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7, 1.2, -0.9]
+2025-11-30 14:54:23,120 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,121 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,121 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,121 - model_trainer - INFO - Fitting model with 1000 samples and 6 features.
+2025-11-30 14:54:23,122 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,122 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,123 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,124 - evaluator - INFO - Calculated metrics: {'r2': 0.9983379924390267, 'adjusted_r2': 0.9983279500972685, 'r2_difference': 1.0042341758165207e-05, 'mse': np.float64(4.18887886731397), 'rmse': np.float64(2.046675076145202), 'mae': np.float64(1.6410513318875524), 'n_samples': 1000, 'n_features': 6}
+2025-11-30 14:54:23,124 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=8, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,124 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7, 1.2, -0.9, 2.1, -1.5]
+2025-11-30 14:54:23,125 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,125 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,125 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,125 - model_trainer - INFO - Fitting model with 1000 samples and 8 features.
+2025-11-30 14:54:23,127 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,127 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,127 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,128 - evaluator - INFO - Calculated metrics: {'r2': 0.9987202861029805, 'adjusted_r2': 0.998709955415618, 'r2_difference': 1.0330687362447577e-05, 'mse': np.float64(4.08176234885869), 'rmse': np.float64(2.0203371869217004), 'mae': np.float64(1.5989721813267204), 'n_samples': 1000, 'n_features': 8}
+2025-11-30 14:54:23,128 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=10, noise_std=2.0, random_seed=42
+2025-11-30 14:54:23,128 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7, 1.2, -0.9, 2.1, -1.5, 0.8, -2.3]
+2025-11-30 14:54:23,128 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:54:23,129 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:54:23,129 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:54:23,129 - model_trainer - INFO - Fitting model with 1000 samples and 10 features.
+2025-11-30 14:54:23,131 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:54:23,131 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:54:23,132 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:54:23,133 - evaluator - INFO - Calculated metrics: {'r2': 0.9989893667779379, 'adjusted_r2': 0.9989791480395955, 'r2_difference': 1.0218738342393507e-05, 'mse': np.float64(3.7396003265944153), 'rmse': np.float64(1.9338046247215397), 'mae': np.float64(1.5434152858395331), 'n_samples': 1000, 'n_features': 10}
+2025-11-30 14:54:23,133 - predictor_analyzer - INFO - Predictor impact analysis completed.
+2025-11-30 14:54:23,134 - __main__ - INFO - Predictor impact analysis complete.
+2025-11-30 14:54:23,137 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:54:23,139 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:54:23,140 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:54:23,141 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:54:23,141 - visualizer - INFO - Initialized Visualizer facade.
+2025-11-30 14:54:23,141 - __main__ - INFO - Creating visualizations...
+2025-11-30 14:54:23,388 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:54:23,390 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:54:23,391 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:54:23,395 - plotters.regression_plotter - INFO - Plotted actual vs predicted values.
+2025-11-30 14:54:23,399 - plotters.regression_plotter - INFO - Plotted residuals vs predicted values.
+2025-11-30 14:54:23,414 - plotters.residuals_plotter - INFO - Plotted residual histogram.
+2025-11-30 14:54:23,644 - plotters.coefficient_plotter - INFO - Plotted correlation heatmap.
+2025-11-30 14:54:23,649 - plotters.coefficient_plotter - INFO - Plotted coefficients comparison.
+2025-11-30 14:54:23,653 - plotters.residuals_plotter - INFO - Plotted Q-Q plot.
+2025-11-30 14:54:23,755 - plotters.analysis_plotter - INFO - Created comprehensive analysis plot.
+2025-11-30 14:54:24,190 - plotters.base_plotter - INFO - Plot saved to regression_analysis_comprehensive.png
+2025-11-30 14:54:24,262 - plotters.analysis_plotter - INFO - Plotted sample size analysis.
+2025-11-30 14:54:24,504 - plotters.base_plotter - INFO - Plot saved to sample_size_analysis.png
+2025-11-30 14:54:24,504 - __main__ - INFO - Visualizations created.
+2025-11-30 14:54:24,504 - __main__ - INFO - Linear regression analysis finished.
+2025-11-30 14:56:36,969 - __main__ - INFO - Starting linear regression analysis.
+2025-11-30 14:56:36,970 - __main__ - INFO - Generating synthetic data...
+2025-11-30 14:56:36,970 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,970 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,970 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,970 - __main__ - INFO - Data generation complete.
+2025-11-30 14:56:36,970 - __main__ - INFO - Training and evaluating model...
+2025-11-30 14:56:36,970 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Fitting model with 1000 samples and 4 features.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,970 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,970 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,970 - evaluator - INFO - Calculated metrics: {'r2': 0.998329120662214, 'adjusted_r2': 0.9983224035593485, 'r2_difference': 6.7171028654833265e-06, 'mse': np.float64(3.923551023004495), 'rmse': np.float64(1.9807955530555128), 'mae': np.float64(1.5721697953446734), 'n_samples': 1000, 'n_features': 4}
+2025-11-30 14:56:36,970 - evaluator - INFO - Comparing fitted parameters with true parameters.
+2025-11-30 14:56:36,970 - evaluator - INFO - Parameter comparison: {'true_intercept': 5.0, 'fitted_intercept': np.float64(5.006271870129964), 'intercept_error': np.float64(0.006271870129964441), 'true_coefficients': [2.5, -1.8, 3.2, 0.7], 'fitted_coefficients': [2.493399264542188, -1.8046435430316934, 3.206081405809486, 0.7054648629401776], 'coefficient_errors': [0.006600735457812146, 0.004643543031693342, 0.006081405809486018, 0.005464862940177673], 'mean_coefficient_error': np.float64(0.005697636809792295)}
+2025-11-30 14:56:36,970 - __main__ - INFO - Model training and evaluation complete.
+2025-11-30 14:56:36,970 - __main__ - INFO - Running sample size analysis...
+2025-11-30 14:56:36,970 - sample_size_analyzer - INFO - Initialized SampleSizeAnalyzer.
+2025-11-30 14:56:36,970 - sample_size_analyzer - INFO - Analyzing sample sizes: [50, 100, 500, 1000, 2000, 5000]
+2025-11-30 14:56:36,970 - data_generator - INFO - Initialized SyntheticDataGenerator with n=50, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,970 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:56:36,970 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,970 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Fitting model with 50 samples and 4 features.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,970 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,970 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,970 - evaluator - INFO - Calculated metrics: {'r2': 0.9983245065620255, 'adjusted_r2': 0.9981755738119834, 'r2_difference': 0.00014893275004213002, 'mse': np.float64(3.7745072692696358), 'rmse': np.float64(1.942809118073527), 'mae': np.float64(1.5404271420156601), 'n_samples': 50, 'n_features': 4}
+2025-11-30 14:56:36,970 - data_generator - INFO - Initialized SyntheticDataGenerator with n=100, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,970 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:56:36,970 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,970 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Fitting model with 100 samples and 4 features.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,970 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,970 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,970 - evaluator - INFO - Calculated metrics: {'r2': 0.9985790552046784, 'adjusted_r2': 0.9985192259501385, 'r2_difference': 5.982925453984489e-05, 'mse': np.float64(4.047256183277841), 'rmse': np.float64(2.0117793575036607), 'mae': np.float64(1.602169743938645), 'n_samples': 100, 'n_features': 4}
+2025-11-30 14:56:36,970 - data_generator - INFO - Initialized SyntheticDataGenerator with n=500, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,970 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:56:36,970 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,970 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Fitting model with 500 samples and 4 features.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,970 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,970 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,970 - evaluator - INFO - Calculated metrics: {'r2': 0.9983309363500762, 'adjusted_r2': 0.9983174489670466, 'r2_difference': 1.3487383029642253e-05, 'mse': np.float64(3.6370030159060818), 'rmse': np.float64(1.9070928178528914), 'mae': np.float64(1.5292224553268696), 'n_samples': 500, 'n_features': 4}
+2025-11-30 14:56:36,970 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,970 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:56:36,970 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,970 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,970 - model_trainer - INFO - Fitting model with 1000 samples and 4 features.
+2025-11-30 14:56:36,985 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,985 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,985 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,987 - evaluator - INFO - Calculated metrics: {'r2': 0.998329120662214, 'adjusted_r2': 0.9983224035593485, 'r2_difference': 6.7171028654833265e-06, 'mse': np.float64(3.923551023004495), 'rmse': np.float64(1.9807955530555128), 'mae': np.float64(1.5721697953446734), 'n_samples': 1000, 'n_features': 4}
+2025-11-30 14:56:36,987 - data_generator - INFO - Initialized SyntheticDataGenerator with n=2000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,987 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:56:36,987 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,988 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Fitting model with 2000 samples and 4 features.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,989 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculated metrics: {'r2': 0.9982997537092936, 'adjusted_r2': 0.9982963446941744, 'r2_difference': 3.409015119193448e-06, 'mse': np.float64(3.9007326596510477), 'rmse': np.float64(1.975027255419795), 'mae': np.float64(1.5757356880672828), 'n_samples': 2000, 'n_features': 4}
+2025-11-30 14:56:36,989 - data_generator - INFO - Initialized SyntheticDataGenerator with n=5000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,989 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:56:36,989 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,989 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Fitting model with 5000 samples and 4 features.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,989 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculated metrics: {'r2': 0.9983494878279202, 'adjusted_r2': 0.998348166096451, 'r2_difference': 1.3217314691615911e-06, 'mse': np.float64(3.8588511473085148), 'rmse': np.float64(1.9643958733688367), 'mae': np.float64(1.5748090956136256), 'n_samples': 5000, 'n_features': 4}
+2025-11-30 14:56:36,989 - sample_size_analyzer - INFO - Sample size analysis completed.
+2025-11-30 14:56:36,989 - __main__ - INFO - Sample size analysis complete.
+2025-11-30 14:56:36,989 - __main__ - INFO - Running predictor impact analysis...
+2025-11-30 14:56:36,989 - predictor_analyzer - INFO - Initialized PredictorImpactAnalyzer.
+2025-11-30 14:56:36,989 - predictor_analyzer - INFO - Analyzing predictor impact with counts: [2, 4, 6, 8, 10] and n=1000
+2025-11-30 14:56:36,989 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=2, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,989 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8]
+2025-11-30 14:56:36,989 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,989 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Fitting model with 1000 samples and 2 features.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,989 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculated metrics: {'r2': 0.9954006135741387, 'adjusted_r2': 0.9953913871219303, 'r2_difference': 9.226452208355163e-06, 'mse': np.float64(3.8625568701527833), 'rmse': np.float64(1.96533886903831), 'mae': np.float64(1.5698808713175207), 'n_samples': 1000, 'n_features': 2}
+2025-11-30 14:56:36,989 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=4, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,989 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7]
+2025-11-30 14:56:36,989 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,989 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Fitting model with 1000 samples and 4 features.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,989 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculated metrics: {'r2': 0.998329120662214, 'adjusted_r2': 0.9983224035593485, 'r2_difference': 6.7171028654833265e-06, 'mse': np.float64(3.923551023004495), 'rmse': np.float64(1.9807955530555128), 'mae': np.float64(1.5721697953446734), 'n_samples': 1000, 'n_features': 4}
+2025-11-30 14:56:36,989 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=6, noise_std=2.0, random_seed=42
+2025-11-30 14:56:36,989 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7, 1.2, -0.9]
+2025-11-30 14:56:36,989 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:36,989 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Fitting model with 1000 samples and 6 features.
+2025-11-30 14:56:36,989 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:36,989 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:36,989 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:37,002 - evaluator - INFO - Calculated metrics: {'r2': 0.9983379924390267, 'adjusted_r2': 0.9983279500972685, 'r2_difference': 1.0042341758165207e-05, 'mse': np.float64(4.18887886731397), 'rmse': np.float64(2.046675076145202), 'mae': np.float64(1.6410513318875524), 'n_samples': 1000, 'n_features': 6}
+2025-11-30 14:56:37,002 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=8, noise_std=2.0, random_seed=42
+2025-11-30 14:56:37,002 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7, 1.2, -0.9, 2.1, -1.5]
+2025-11-30 14:56:37,003 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:37,003 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:37,003 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:37,003 - model_trainer - INFO - Fitting model with 1000 samples and 8 features.
+2025-11-30 14:56:37,004 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:37,004 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:37,004 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:37,004 - evaluator - INFO - Calculated metrics: {'r2': 0.9987202861029805, 'adjusted_r2': 0.998709955415618, 'r2_difference': 1.0330687362447577e-05, 'mse': np.float64(4.08176234885869), 'rmse': np.float64(2.0203371869217004), 'mae': np.float64(1.5989721813267204), 'n_samples': 1000, 'n_features': 8}
+2025-11-30 14:56:37,004 - data_generator - INFO - Initialized SyntheticDataGenerator with n=1000, p=10, noise_std=2.0, random_seed=42
+2025-11-30 14:56:37,004 - data_generator - INFO - Set true parameters: beta_0=5.0, beta_coefficients=[2.5, -1.8, 3.2, 0.7, 1.2, -0.9, 2.1, -1.5, 0.8, -2.3]
+2025-11-30 14:56:37,004 - data_generator - INFO - Generating synthetic dataset...
+2025-11-30 14:56:37,004 - data_generator - INFO - Dataset generated successfully.
+2025-11-30 14:56:37,004 - model_trainer - INFO - Initialized LinearRegressionTrainer.
+2025-11-30 14:56:37,004 - model_trainer - INFO - Fitting model with 1000 samples and 10 features.
+2025-11-30 14:56:37,004 - model_trainer - INFO - Model fitting completed.
+2025-11-30 14:56:37,004 - evaluator - INFO - Initialized RegressionEvaluator.
+2025-11-30 14:56:37,004 - evaluator - INFO - Calculating model evaluation metrics.
+2025-11-30 14:56:37,004 - evaluator - INFO - Calculated metrics: {'r2': 0.9989893667779379, 'adjusted_r2': 0.9989791480395955, 'r2_difference': 1.0218738342393507e-05, 'mse': np.float64(3.7396003265944153), 'rmse': np.float64(1.9338046247215397), 'mae': np.float64(1.5434152858395331), 'n_samples': 1000, 'n_features': 10}
+2025-11-30 14:56:37,004 - predictor_analyzer - INFO - Predictor impact analysis completed.
+2025-11-30 14:56:37,009 - __main__ - INFO - Predictor impact analysis complete.
+2025-11-30 14:56:37,010 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:56:37,010 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:56:37,010 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:56:37,010 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:56:37,010 - visualizer - INFO - Initialized Visualizer facade.
+2025-11-30 14:56:37,010 - __main__ - INFO - Creating visualizations...
+2025-11-30 14:56:37,187 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:56:37,188 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:56:37,190 - plotters.base_plotter - INFO - Initialized BasePlotter with default styles.
+2025-11-30 14:56:37,191 - plotters.regression_plotter - INFO - Plotted actual vs predicted values.
+2025-11-30 14:56:37,191 - plotters.regression_plotter - INFO - Plotted residuals vs predicted values.
+2025-11-30 14:56:37,204 - plotters.residuals_plotter - INFO - Plotted residual histogram.
+2025-11-30 14:56:37,457 - plotters.coefficient_plotter - INFO - Plotted correlation heatmap.
+2025-11-30 14:56:37,460 - plotters.coefficient_plotter - INFO - Plotted coefficients comparison.
+2025-11-30 14:56:37,460 - plotters.residuals_plotter - INFO - Plotted Q-Q plot.
+2025-11-30 14:56:37,573 - plotters.analysis_plotter - INFO - Created comprehensive analysis plot.
+2025-11-30 14:56:38,075 - plotters.base_plotter - INFO - Plot saved to regression_analysis_comprehensive.png
+2025-11-30 14:56:38,139 - plotters.analysis_plotter - INFO - Plotted sample size analysis.
+2025-11-30 14:56:38,410 - plotters.base_plotter - INFO - Plot saved to sample_size_analysis.png
+2025-11-30 14:56:38,410 - __main__ - INFO - Visualizations created.
+2025-11-30 14:56:38,410 - __main__ - INFO - Linear regression analysis finished.
