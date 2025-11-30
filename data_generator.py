@@ -5,6 +5,10 @@ Handles the generation of synthetic data following a linear relationship.
 
 import numpy as np
 import pandas as pd
+from config import setup_logging
+
+# Setup logger
+logger = setup_logging(__name__)
 
 class SyntheticDataGenerator:
     """
@@ -12,19 +16,13 @@ class SyntheticDataGenerator:
     """
     
     def __init__(self, n=1000, p=4, noise_std=2.0, random_seed=42):
-        """
-        Initialize the data generator.
-        
-        Parameters:
-        -----------
-        n : int
-            Number of observations/samples
-        p : int
-            Number of predictors/features
-        noise_std : float
-            Standard deviation of the noise term
-        random_seed : int
-            Random seed for reproducibility
+        """Initializes the data generator.
+
+        Args:
+            n (int, optional): Number of observations/samples. Defaults to 1000.
+            p (int, optional): Number of predictors/features. Defaults to 4.
+            noise_std (float, optional): Standard deviation of the noise term. Defaults to 2.0.
+            random_seed (int, optional): Random seed for reproducibility. Defaults to 42.
         """
         self.n = n
         self.p = p
@@ -37,30 +35,26 @@ class SyntheticDataGenerator:
         
         # Set random seed
         np.random.seed(random_seed)
+        logger.info(f"Initialized SyntheticDataGenerator with n={n}, p={p}, noise_std={noise_std}, random_seed={random_seed}")
     
     def set_true_parameters(self, beta_0, beta_coefficients):
-        """
-        Set the true parameters for the linear model.
-        
-        Parameters:
-        -----------
-        beta_0 : float
-            True intercept
-        beta_coefficients : list
-            True coefficients for predictors
+        """Sets the true parameters for the linear model.
+
+        Args:
+            beta_0 (float): True intercept.
+            beta_coefficients (list): True coefficients for predictors.
         """
         self.beta_0 = beta_0
         self.beta_coefficients = beta_coefficients
+        logger.info(f"Set true parameters: beta_0={beta_0}, beta_coefficients={beta_coefficients}")
     
     def generate_features(self):
-        """
-        Generate input features X₁, X₂, ..., Xₚ.
+        """Generates input features X₁, X₂, ..., Xₚ.
+
         Each feature follows a normal distribution with different parameters.
-        
+
         Returns:
-        --------
-        numpy.ndarray
-            Feature matrix of shape (n, p)
+            numpy.ndarray: Feature matrix of shape (n, p).
         """
         # Generate features with different distributions
         features = []
@@ -88,19 +82,14 @@ class SyntheticDataGenerator:
         return np.column_stack(features)
     
     def generate_response(self, X):
-        """
-        Generate response variable y using the linear model:
+        """Generates response variable y using the linear model:
         y = β₀ + β₁x₁ + β₂x₂ + ... + βₚxₚ + ε
-        
-        Parameters:
-        -----------
-        X : numpy.ndarray
-            Feature matrix
-        
+
+        Args:
+            X (numpy.ndarray): Feature matrix.
+
         Returns:
-        --------
-        numpy.ndarray
-            Response variable
+            numpy.ndarray: Response variable.
         """
         # Generate noise term
         epsilon = np.random.normal(0, self.noise_std, self.n)
@@ -114,17 +103,15 @@ class SyntheticDataGenerator:
         return y
     
     def generate_dataset(self):
-        """
-        Generate complete synthetic dataset.
-        
+        """Generates complete synthetic dataset.
+
         Returns:
-        --------
-        tuple
-            (X, y, data_info) where:
-            - X: feature matrix
-            - y: response variable
-            - data_info: dictionary with dataset information
+            tuple: A tuple containing:
+                - X (numpy.ndarray): The feature matrix.
+                - y (numpy.ndarray): The response variable.
+                - data_info (dict): A dictionary with dataset information.
         """
+        logger.info("Generating synthetic dataset...")
         # Generate features
         X = self.generate_features()
         
@@ -140,26 +127,20 @@ class SyntheticDataGenerator:
             'noise_std': self.noise_std,
             'feature_names': [f'X{i+1}' for i in range(self.p)]
         }
+        logger.info("Dataset generated successfully.")
         
         return X, y, data_info
     
     def create_dataframe(self, X, y, feature_names=None):
-        """
-        Create a pandas DataFrame from the generated data.
-        
-        Parameters:
-        -----------
-        X : numpy.ndarray
-            Feature matrix
-        y : numpy.ndarray
-            Response variable
-        feature_names : list, optional
-            Names for features
-        
+        """Creates a pandas DataFrame from the generated data.
+
+        Args:
+            X (numpy.ndarray): Feature matrix.
+            y (numpy.ndarray): Response variable.
+            feature_names (list, optional): Names for features. Defaults to None.
+
         Returns:
-        --------
-        pandas.DataFrame
-            DataFrame containing all variables
+            pandas.DataFrame: DataFrame containing all variables.
         """
         if feature_names is None:
             feature_names = [f'X{i+1}' for i in range(X.shape[1])]
